@@ -41,7 +41,7 @@ Age ranges from 18–70. Total Amount ranges from $25–$2,000. Left unscaled, K
 **`PCA`** then rotates the scaled data onto new axes — principal components — ranked by how much variance (information) each one captures, so the segments can be visualized in 2D/3D without losing the underlying structure.
 
 <p align="center">
-  <img src="assets/01_pca_variance.png" width="70%">
+  <img src="output/01_pca_variance.png" width="70%">
 </p>
 <p align="center"><em>PCA explained variance by component — the first 2 components capture 60.1% of total variance, the first 3 capture 79.8%.</em></p>
 
@@ -57,7 +57,7 @@ K-Means needs to be told how many clusters to find — it won't discover that nu
 - **Silhouette score** — measures how well separated clusters are (−1 to 1, higher is better). It's technically highest at K=2 (0.316), but that only splits customers into "big spenders vs. everyone else" — not useful for targeting.
 
 <p align="center">
-  <img src="assets/02_elbow_silhouette.png" width="70%">
+  <img src="ouput/02_elbow_silhouette.png" width="70%">
 </p>
 <p align="center"><em>Inertia (elbow) vs. silhouette score across K=2–10.</em></p>
 
@@ -70,7 +70,7 @@ K-Means needs to be told how many clusters to find — it won't discover that nu
 With K=4 chosen, K-Means was fit on the scaled data and the resulting labels projected back onto the PCA axes for visualization.
 
 <p align="center">
-  <img src="assets/04_pca_clusters_2d.png" width="100%">
+  <img src="ouput/04_pca_clusters_2d.png" width="100%">
 </p>
 <p align="center"><em>The four clusters in 2D PCA space — clean vertical bands driven mostly by PC1, the "spend axis."</em></p>
 
@@ -86,7 +86,7 @@ With K=4 chosen, K-Means was fit on the scaled data and the resulting labels pro
 Every transaction now carries a cluster label. Aggregating by cluster turns abstract math into a business-readable profile — average spend, age, quantity, and category mix per segment.
 
 <p align="center">
-  <img src="assets/06_cluster_profiles_bar.png" width="100%">
+  <img src="ouput/06_cluster_profiles_bar.png" width="100%">
 </p>
 <p align="center"><em>Average total spend, average age, and category mix by cluster.</em></p>
 
@@ -155,7 +155,3 @@ jupyter
 ## 🛠️ Tech Stack
 
 `Python` · `pandas` · `NumPy` · `scikit-learn` (`StandardScaler`, `PCA`, `KMeans`, `silhouette_score`) · `matplotlib` · `seaborn`
-
-## 📄 License
-
-MIT — feel free to fork and build on this.
