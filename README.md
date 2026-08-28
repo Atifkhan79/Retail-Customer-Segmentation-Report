@@ -1,4 +1,4 @@
-# 🛍️ Retail Customer Segmentation
+# 🛍️ Retail Customer Segmentation Report
 
 Unsupervised customer segmentation on 1,000 retail transactions using **StandardScaler → PCA → K-Means**, turning raw sales data into four business-ready customer personas.
 
